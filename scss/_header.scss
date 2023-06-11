@@ -1,0 +1,60 @@
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 12rem;
+        position: relative;
+        .header__images {
+            width: 100%;
+            max-width: 20rem;
+        }
+        .header__button {
+            @include btnMain(13.7rem, 0, 0, 5.7rem);
+            span {
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 1.6rem;
+                line-height: 2.1rem;
+                opacity: 0.5;
+                color: $white-color;
+            }
+            &:hover {
+                @include hover__btnMain($violet-color);
+                span {
+                    opacity: 1;
+                }
+            }
+        }
+        a::after {
+            content: url("../images/tube.png");
+            position: absolute;
+            bottom: 3rem;
+            left: 40rem;
+            z-index: 3;
+            transform: rotate(25deg);
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header .container {
+        margin-top: 2.4rem;
+        height: 2.4rem;
+
+        .header__images {
+            max-width: 17rem;
+        }
+        .header__button {
+            display: none;
+        }
+        a::after {
+            display: none;
+        }
+    }
+}

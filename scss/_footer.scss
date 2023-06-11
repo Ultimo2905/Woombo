@@ -1,0 +1,115 @@
+footer {
+    background: #0a0a0a;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+}
+.footer {
+    width: 100%;
+    .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 4.5rem 0;
+
+        &__grup {
+            ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+
+                li {
+                    margin-right: 3.2rem;
+                    a {
+                        text-decoration: none;
+                        font-family: "Inter";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 30px;
+                        color: $white-color;
+                        letter-spacing: 0.11rem;
+                    }
+                }
+            }
+            li:first-child a:hover {
+                font-weight: 700;
+                letter-spacing: 0.08rem;
+            }
+            li:last-child a:hover {
+                font-weight: 700;
+                letter-spacing: 0.05rem;
+            }
+        }
+        &__button {
+            width: 100%;
+            max-width: 13.8rem;
+        }
+        .footer__button {
+            @include btnMain(13.8rem, 0, 0, 5.4rem);
+            margin: 0;
+            span {
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 1.6rem;
+                line-height: 2.1rem;
+                opacity: 0.5;
+                color: $white-color;
+            }
+            &:hover {
+                @include hover__btnMain($violet-color);
+                span {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__copyright p {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+        color: $white-color;
+        opacity: 0.5;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 768px) {
+    footer {
+        height: auto;
+    }
+    .footer {
+        .footer-content {
+            flex-direction: column;
+            margin: 0;
+            padding: 7.2rem 0;
+            &__grup {
+                ul {
+                    flex-direction: column;
+                    padding: 4.5rem 0;
+                    align-items: center;
+                    margin: 0;
+                    li {
+                        margin: 2.7rem 0;
+                    }
+                }
+            }
+            &__button {
+                max-width: 34.5rem;
+            }
+            .footer__button {
+                max-width: 34.5rem;
+                span {
+                    opacity: 1;
+                    font-size: 1.6rem;
+                    line-height: 2.2rem;
+                }
+            }
+        }
+        &__copyright p {
+            padding-bottom: 2.6rem;
+        }
+    }
+}

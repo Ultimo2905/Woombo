@@ -1,0 +1,18 @@
+@mixin btnMain($btmMW, $x: 0, $y: 0, $btmHig: 6rem) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: $x $y;
+    width: 100%;
+    max-width: $btmMW;
+    height: $btmHig;
+    background: $background-btnMain;
+    border-radius: 30px;
+    border: unset;
+    cursor: pointer;
+    color: $white-color;
+}
+@mixin hover__btnMain($bgColor) {
+    background: $bgColor;
+}
